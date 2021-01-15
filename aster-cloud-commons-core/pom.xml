@@ -17,15 +17,6 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
         </dependency>
-        <!--Lombok-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-<!--            <scope>provided</scope>-->
-            <!-- Only needed at compile time -->
-            <scope>compile</scope>
-            <optional>true</optional>
-        </dependency>
         <!--swagger 依赖-->
         <dependency>
             <groupId>io.swagger</groupId>
