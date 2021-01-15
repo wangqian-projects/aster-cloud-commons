@@ -1,6 +1,6 @@
-package com.aster.cloud.core;
+package com.aster.cloud.commons;
 
-import com.aster.cloud.core.constant.RCodeConstant;
+import com.aster.cloud.commons.constant.RCodeConstant;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;

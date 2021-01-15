@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>aster-cloud-common-core</artifactId>
+    <artifactId>aster-cloud-commons-core</artifactId>
 
     <dependencies>
         <!--hutool-->
@@ -21,7 +21,10 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <scope>provided</scope>
+<!--            <scope>provided</scope>-->
+            <!-- Only needed at compile time -->
+            <scope>compile</scope>
+            <optional>true</optional>
         </dependency>
         <!--swagger 依赖-->
         <dependency>

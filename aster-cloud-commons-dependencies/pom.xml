@@ -27,11 +27,28 @@
                 <artifactId>hutool-all</artifactId>
                 <version>${hutool.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>io.swagger</groupId>
                 <artifactId>swagger-annotations</artifactId>
                 <version>${swagger.core.version}</version>
+            </dependency>
+            <!-- commons 核心类 -->
+            <dependency>
+                <groupId>com.github.wangqian-projects</groupId>
+                <artifactId>aster-cloud-commons-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!-- commons 国际化 -->
+            <dependency>
+                <groupId>com.github.wangqian-projects</groupId>
+                <artifactId>aster-cloud-commons-i18n</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!-- commons 脱敏工具 -->
+            <dependency>
+                <groupId>com.github.wangqian-projects</groupId>
+                <artifactId>aster-cloud-commons-sensitive</artifactId>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
