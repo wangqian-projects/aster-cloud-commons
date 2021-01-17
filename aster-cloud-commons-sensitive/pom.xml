@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>aster-cloud-commons-sensitive</artifactId>
+    <description>序列化脱敏</description>
 
     <dependencies>
         <!--hutool-->
