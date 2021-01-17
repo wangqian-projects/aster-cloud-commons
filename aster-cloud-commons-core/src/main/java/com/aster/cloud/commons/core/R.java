@@ -1,6 +1,5 @@
-package com.aster.cloud.commons;
+package com.aster.cloud.commons.core;
 
-import com.aster.cloud.commons.constant.RCodeConstant;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -25,7 +24,7 @@ public class R<T> implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "返回标记：成功标记=1，失败标记=0")
+    @ApiModelProperty(value = "返回标记：成功标记=0，失败标记!=0")
     private int code;
 
     @ApiModelProperty(value = "返回信息")

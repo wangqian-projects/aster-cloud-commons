@@ -11,7 +11,7 @@ import lombok.Data;
 @Data
 public class UserVO {
     @Sensitive(SensitiveType.NAME)
-    private String name1 = "";
+    private String name1 = "王骞";
     @Sensitive(SensitiveType.NAME_HIDE_ALL)
     private String name2 = "琳";
     @Sensitive(SensitiveType.MOBILE_PHONE)

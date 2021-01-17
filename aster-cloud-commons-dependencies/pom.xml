@@ -18,20 +18,12 @@
     <properties>
         <hutool.version>5.4.2</hutool.version>
         <swagger.core.version>1.5.22</swagger.core.version>
+        <mybatis-plus.version>3.4.0</mybatis-plus.version>
+        <dynamic-ds.version>3.2.0</dynamic-ds.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>cn.hutool</groupId>
-                <artifactId>hutool-all</artifactId>
-                <version>${hutool.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.swagger</groupId>
-                <artifactId>swagger-annotations</artifactId>
-                <version>${swagger.core.version}</version>
-            </dependency>
             <!-- commons 核心类 -->
             <dependency>
                 <groupId>com.github.wangqian-projects</groupId>
@@ -49,6 +41,35 @@
                 <groupId>com.github.wangqian-projects</groupId>
                 <artifactId>aster-cloud-commons-sensitive</artifactId>
                 <version>${project.version}</version>
+            </dependency>
+            <!-- hutool 工具包-->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+            <!-- swagger-->
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger.core.version}</version>
+            </dependency>
+            <!--mybatis plus extension-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <!--mybatis-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+                <version>${dynamic-ds.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

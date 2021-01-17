@@ -1,4 +1,4 @@
-package com.aster.cloud.commons.constant;
+package com.aster.cloud.commons.core;
 
 /**
  * 定义响应码常量
