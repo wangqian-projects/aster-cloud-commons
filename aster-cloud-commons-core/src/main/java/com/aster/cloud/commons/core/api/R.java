@@ -1,4 +1,4 @@
-package com.aster.cloud.commons.core;
+package com.aster.cloud.commons.core.api;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -24,44 +24,44 @@ public class R<T> implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "返回标记：成功标记=0，失败标记!=0")
-    private int code;
+    @ApiModelProperty(value = "返回标记：成功标记=true，失败标记false")
+    private Boolean success;
 
     @ApiModelProperty(value = "返回信息")
-    private String message;
+    private String msg;
 
     @ApiModelProperty(value = "数据")
     private T data;
 
-    public static <T> R<T> ok(T data) {
-        return restResult(data, RCodeConstant.SUCCESS, null);
+    public static <T> R<T> success(T data) {
+        return restResult(data, true, null);
     }
 
-    public static <T> R<T> ok(T data, String msg) {
-        return restResult(data, RCodeConstant.SUCCESS, msg);
+    public static <T> R<T> success(T data, String msg) {
+        return restResult(data, true, msg);
     }
 
     public static <T> R<T> failed() {
-        return restResult(null, RCodeConstant.FAIL, null);
+        return restResult(null, false, null);
     }
 
     public static <T> R<T> failed(String msg) {
-        return restResult(null, RCodeConstant.FAIL, msg);
+        return restResult(null, false, msg);
     }
 
     public static <T> R<T> failed(T data) {
-        return restResult(data, RCodeConstant.FAIL, null);
+        return restResult(data, false, null);
     }
 
     public static <T> R<T> failed(T data, String msg) {
-        return restResult(data, RCodeConstant.FAIL, msg);
+        return restResult(data, false, msg);
     }
 
-    private static <T> R<T> restResult(T data, int code, String msg) {
+    private static <T> R<T> restResult(T data, boolean success, String msg) {
         R<T> apiResult = new R<T>();
-        apiResult.setCode(code);
         apiResult.setData(data);
-        apiResult.setMessage(msg);
+        apiResult.setSuccess(success);
+        apiResult.setMsg(msg);
         return apiResult;
     }
 

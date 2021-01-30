@@ -12,6 +12,11 @@
     <artifactId>aster-cloud-commons-core</artifactId>
 
     <dependencies>
+        <!--web模块-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <!--hutool-->
         <dependency>
             <groupId>cn.hutool</groupId>
