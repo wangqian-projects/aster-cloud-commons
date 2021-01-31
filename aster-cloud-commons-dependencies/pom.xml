@@ -31,6 +31,12 @@
                 <artifactId>aster-cloud-commons-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <!-- commons 核心类 -->
+            <dependency>
+                <groupId>com.github.wangqian-projects</groupId>
+                <artifactId>aster-cloud-commons-feign</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <!-- commons 国际化 -->
             <dependency>
                 <groupId>com.github.wangqian-projects</groupId>
@@ -43,6 +49,13 @@
                 <artifactId>aster-cloud-commons-sensitive</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <!-- commons 缓存 -->
+            <dependency>
+                <groupId>com.github.wangqian-projects</groupId>
+                <artifactId>aster-cloud-commons-redis</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
             <!-- hutool 工具包-->
             <dependency>
                 <groupId>cn.hutool</groupId>
