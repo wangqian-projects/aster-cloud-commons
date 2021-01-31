@@ -19,6 +19,8 @@
     <properties>
         <hutool.version>5.4.2</hutool.version>
         <swagger.core.version>1.5.22</swagger.core.version>
+        <swagger.fox.version>2.9.2</swagger.fox.version>
+        <knife4j.version>2.0.4</knife4j.version>
         <mybatis-plus.version>3.4.0</mybatis-plus.version>
         <dynamic-ds.version>3.2.0</dynamic-ds.version>
     </properties>
@@ -67,6 +69,24 @@
                 <groupId>io.swagger</groupId>
                 <artifactId>swagger-annotations</artifactId>
                 <version>${swagger.core.version}</version>
+            </dependency>
+            <!--swagger 依赖-->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.fox.version}</version>
+            </dependency>
+            <!--knife4j是为Java MVC框架集成Swagger生成Api文档的增强-->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-micro-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+            <!--knife4j是为Java MVC框架集成Swagger生成Api文档的增强-->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
             </dependency>
             <!--mybatis plus extension-->
             <dependency>

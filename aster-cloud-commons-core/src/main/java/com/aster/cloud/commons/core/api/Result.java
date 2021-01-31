@@ -58,7 +58,7 @@ public class Result<T> implements Serializable {
     }
 
     private static <T> Result<T> restResult(T data, boolean success, String msg) {
-        Result<T> apiResult = new Result<T>();
+        Result<T> apiResult = new Result<>();
         apiResult.setData(data);
         apiResult.setSuccess(success);
         apiResult.setMsg(msg);
