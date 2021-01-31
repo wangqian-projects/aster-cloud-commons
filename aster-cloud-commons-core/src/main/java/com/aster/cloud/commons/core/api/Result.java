@@ -20,7 +20,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @ApiModel(value = "响应信息主体")
-public class R<T> implements Serializable {
+public class Result<T> implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -33,32 +33,32 @@ public class R<T> implements Serializable {
     @ApiModelProperty(value = "数据")
     private T data;
 
-    public static <T> R<T> success(T data) {
+    public static <T> Result<T> success(T data) {
         return restResult(data, true, null);
     }
 
-    public static <T> R<T> success(T data, String msg) {
+    public static <T> Result<T> success(T data, String msg) {
         return restResult(data, true, msg);
     }
 
-    public static <T> R<T> failed() {
+    public static <T> Result<T> failed() {
         return restResult(null, false, null);
     }
 
-    public static <T> R<T> failed(String msg) {
+    public static <T> Result<T> failed(String msg) {
         return restResult(null, false, msg);
     }
 
-    public static <T> R<T> failed(T data) {
+    public static <T> Result<T> failed(T data) {
         return restResult(data, false, null);
     }
 
-    public static <T> R<T> failed(T data, String msg) {
+    public static <T> Result<T> failed(T data, String msg) {
         return restResult(data, false, msg);
     }
 
-    private static <T> R<T> restResult(T data, boolean success, String msg) {
-        R<T> apiResult = new R<T>();
+    private static <T> Result<T> restResult(T data, boolean success, String msg) {
+        Result<T> apiResult = new Result<T>();
         apiResult.setData(data);
         apiResult.setSuccess(success);
         apiResult.setMsg(msg);
