@@ -49,6 +49,15 @@ public class ParamAssert<T> {
         return this;
     }
 
+    public ParamAssert<T> isNotBlank(SFunction<T, ?> field, String msg) {
+        // 当前验证列的值
+        Object value = field.apply(this.entity);
+        if (!isBlank(value)) {
+            throw new ApiException(msg);
+        }
+        return this;
+    }
+
 
     private boolean isBlank(Object value) {
         if (value == null) {
