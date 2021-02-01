@@ -62,6 +62,15 @@ public class SpringContextHolder implements ApplicationContextAware, DisposableB
 	}
 
 	/**
+	 * 获取当前环境变量
+	 *
+	 * @return profile
+	 */
+	public static String getActiveProfile() {
+		return getApplicationContext().getEnvironment().getActiveProfiles()[0];
+	}
+
+	/**
 	 * 发布事件
 	 * @param event
 	 */
