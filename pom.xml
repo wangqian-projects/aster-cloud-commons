@@ -24,7 +24,6 @@
         <module>aster-cloud-commons-i18n</module>
         <module>aster-cloud-commons-sensitive</module>
         <module>aster-cloud-commons-redis</module>
-        <module>aster-cloud-commons-feign</module>
     </modules>
 
     <dependencyManagement>
