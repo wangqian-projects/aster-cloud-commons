@@ -33,6 +33,10 @@ public class Result<T> implements Serializable {
     @ApiModelProperty(value = "数据")
     private T data;
 
+    public static <T> Result<T> success() {
+        return restResult(null, true, null);
+    }
+
     public static <T> Result<T> success(T data) {
         return restResult(data, true, null);
     }
