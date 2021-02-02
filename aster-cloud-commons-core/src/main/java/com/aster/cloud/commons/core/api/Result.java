@@ -24,14 +24,18 @@ public class Result<T> implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @ApiModelProperty(value = "响应状态码")
+    private int code;
+
+    @ApiModelProperty(value = "数据")
+    private T data;
+
     @ApiModelProperty(value = "返回标记：成功标记=true，失败标记false")
     private Boolean success;
 
     @ApiModelProperty(value = "返回信息")
     private String msg;
 
-    @ApiModelProperty(value = "数据")
-    private T data;
 
     public static <T> Result<T> success() {
         return restResult(null, true, null);
