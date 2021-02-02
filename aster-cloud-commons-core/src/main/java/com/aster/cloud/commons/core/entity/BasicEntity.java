@@ -24,7 +24,7 @@ public class BasicEntity {
     private String createBy;
 
     @ApiModelProperty(value = "更新人员")
-    private String update_by;
+    private String updateBy;
 
     @ApiModelProperty(value = "建立时间")
     private LocalDateTime createTime;
