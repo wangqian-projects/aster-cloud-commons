@@ -25,7 +25,7 @@ public class Result<T> implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "响应状态码")
-    private int code;
+    private String code;
 
     @ApiModelProperty(value = "数据")
     private T data;
@@ -34,7 +34,7 @@ public class Result<T> implements Serializable {
     private Boolean success;
 
     @ApiModelProperty(value = "返回信息")
-    private String msg;
+    private String message;
 
 
     public static <T> Result<T> success() {
@@ -67,10 +67,10 @@ public class Result<T> implements Serializable {
 
     private static <T> Result<T> restResult(T data, boolean success, String msg) {
         Result<T> apiResult = new Result<>();
-        apiResult.setCode(success ? 200 : 500);
+        apiResult.setCode(success ? "200" : "500");
         apiResult.setData(data);
         apiResult.setSuccess(success);
-        apiResult.setMsg(msg);
+        apiResult.setMessage(msg);
         return apiResult;
     }
 
