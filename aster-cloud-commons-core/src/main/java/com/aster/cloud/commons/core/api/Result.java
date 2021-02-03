@@ -30,7 +30,7 @@ public class Result<T> implements Serializable {
     @ApiModelProperty(value = "数据")
     private T data;
 
-    @ApiModelProperty(value = "返回标记：成功标记=true，失败标记false")
+    @ApiModelProperty(value = "返回标记：成功标记=true，失败标记=false")
     private Boolean success;
 
     @ApiModelProperty(value = "返回信息")
@@ -67,6 +67,7 @@ public class Result<T> implements Serializable {
 
     private static <T> Result<T> restResult(T data, boolean success, String msg) {
         Result<T> apiResult = new Result<>();
+        apiResult.setCode(success ? 200 : 500);
         apiResult.setData(data);
         apiResult.setSuccess(success);
         apiResult.setMsg(msg);
